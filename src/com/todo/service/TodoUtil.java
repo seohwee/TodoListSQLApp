@@ -94,15 +94,10 @@ public class TodoUtil {
 
 	public static void loadList(TodoList l, String filename) {
 		int count=0;
-		File f = new File(filename);
+		//File f = new File(filename);
 
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(filename));
-
-			if(!f.exists()){
-				System.out.print("todolist.txt 파일이 없습니다.");
-			}
-			else{
 
 				String oneline;
 				while((oneline = br.readLine()) != null) {
@@ -114,13 +109,11 @@ public class TodoUtil {
 					l.addItem(t);
 					count++;
 				}
-			}
-			System.out.printf("%d개의 항목을 읽었습니다.\n", count);
-
+				System.out.printf("%d개의 항목을 읽었습니다.\n", count);
 
 			br.close();
 		} catch (FileNotFoundException e) {
-				e.printStackTrace();
+				System.out.println("todolist.txt 파일이 없습니다.");
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
