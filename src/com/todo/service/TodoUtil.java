@@ -113,7 +113,7 @@ public class TodoUtil {
 		String new_description = sc.nextLine();
 		
 		System.out.print("새 마감일자 > ");
-		String new_dueDate = sc.next();
+		String new_dueDate = sc.nextLine();
 		
 		for (TodoItem item : l.getList()) {
 			if(item.getNum() == num) {
