@@ -110,7 +110,7 @@ public class TodoUtil {
 		String new_category = sc.next().trim();
 		
 		System.out.print("새 내용 > ");
-		String new_description = sc.next();
+		String new_description = sc.nextLine();
 		
 		System.out.print("새 마감일자 > ");
 		String new_dueDate = sc.next();
